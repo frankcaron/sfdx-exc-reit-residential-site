@@ -4,11 +4,13 @@ import bookAppointment from '@salesforce/apex/reitPropertyDataHelper.bookAppoint
 export default class AmenitySchedule extends LightningElement {
 
     //Properties
-    @api
-    recordId;
-
-    @api
-    operatingMode;
+    @api recordId;
+    @api operatingMode;
+    @api firstName;
+    @api lastName;
+    @api comment;
+    @api email;
+    @api phone;
 
     //Variables
     selectedElement;
@@ -42,7 +44,7 @@ export default class AmenitySchedule extends LightningElement {
 
     // Snag Email
     emailChange(event) {
-        this.selectedEmail= event.target.value;
+        this.selectedEmail = event.target.value;
     }
 
     // Create Record
@@ -54,6 +56,11 @@ export default class AmenitySchedule extends LightningElement {
 
         //Clear error
         this.error = null;
+
+        //Check email
+        if (!this.selectedEmail) {
+            this.selectedEmail = this.email;
+        }
 
         //Call Apex Controller To Created Booking
         bookAppointment({ email: this.selectedEmail, timeSlot: this.selectedTime, amenityOrProperty: this.recordId, operatingMode: this.operatingMode})

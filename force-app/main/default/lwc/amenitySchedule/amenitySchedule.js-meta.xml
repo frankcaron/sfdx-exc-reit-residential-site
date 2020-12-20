@@ -11,9 +11,19 @@
         <targetConfig targets="lightningCommunity__Default">
             <property name="recordId" label="Record Id" type="String" description="Automatically bind the page's record id to the component variable" required="true" default="{!recordId}" />
             <property name="operatingMode" label="Operating Mode" type="String" datasource="Amenity,Property" description="Adjusts what type of booking is made." required="true" default="Amentiy" />
+            <property name="firstName" label="First Name" type="String" description="Default First Name for the form" required="true" default="Frank" />
+            <property name="lastName" label="Last Name" type="String" description="Default Last Name for the form" required="true" default="Caron" />
+            <property name="comment" label="Comment" type="String" description="Default Comment for the form" required="true" default="Looking forward to seeing the unit!" />
+            <property name="email" label="Email" type="String" description="Default email for the form" required="true" default="frank@frankcaron.com" />
+            <property name="phone" label="Phone" type="String" description="Default phone for the form" required="true" default="123-123-1234" />
         </targetConfig>
         <targetConfig targets="lightning__RecordPage">
             <property name="operatingMode" label="Operating Mode" type="String" datasource="Amenity,Property" description="Adjusts what type of booking is made." required="true" default="Amentiy" />
+            <property name="firstName" label="First Name" type="String" description="Default First Name for the form" required="true" default="Frank" />
+            <property name="lastName" label="Last Name" type="String" description="Default Last Name for the form" required="true" default="Caron" />
+            <property name="comment" label="Comment" type="String" description="Default Comment for the form" required="true" default="Looking forward to seeing the unit!" />
+            <property name="email" label="Email" type="String" description="Default email for the form" required="true" default="frank@frankcaron.com" />
+            <property name="phone" label="Phone" type="String" description="Default phone for the form" required="true" default="123-123-1234" />
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>
