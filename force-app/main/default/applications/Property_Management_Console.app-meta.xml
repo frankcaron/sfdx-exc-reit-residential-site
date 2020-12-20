@@ -11,6 +11,7 @@
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <label>Property Management Console</label>
     <navType>Standard</navType>
+    <tabs>Operations_Hub</tabs>
     <tabs>Rental_Property__c</tabs>
     <tabs>PropertyAmenitiy__c</tabs>
     <uiType>Lightning</uiType>
