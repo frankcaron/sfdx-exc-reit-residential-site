@@ -1,14 +1,10 @@
 .reit-appointment-booker {
-    background-color: #fff;
-    margin: 20px;
-    border: 1px solid #eee;
+    margin: 5px;
 }
 
 .reit-appointment-header {
     margin-bottom: .5rem;
     font-weight: bolder;
-    font-size: 1em;
-    margin: 10px;
 }
 
 .btn-group-date-pick {
