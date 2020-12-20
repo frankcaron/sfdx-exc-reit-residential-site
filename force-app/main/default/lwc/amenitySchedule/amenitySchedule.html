@@ -1,138 +1,152 @@
 <template>
     <div class="reit-appointment-booker">
-        <lightning-card>
+        <lightning-card class="reit-appointment-scheduler-holder">
             <div slot="title"><h1 class="reit-appointment-header">Book An Appointment</h1></div>
-            <div class="btn-group btn-group-date-pick">
-                <div class="arrow arrow-left" data-link="12-20-2020">&lt;</div>
-                    <button type="button" class="btn btn-group-item" data-link="12-20-2020">
-                        <span>Today</span> Dec 20
-                    </button>
-                    <button
-                        type="button"
-                        class="btn btn-group-item selected"
-                        data-link="12-21-2020"
-                    >
-                        <span>Monday</span> Dec 21
-                    </button>
-                    <button type="button" class="btn btn-group-item" data-link="12-22-2020">
-                        <span>Tuesday</span> Dec 22
-                    </button>
-                <div class="arrow arrow-right" data-link="12-22-2020">&gt;</div>
-            </div>
-            <div class="date-box">
-                <div class="row">
-                    <div class="column-container">
-                        <div class="time-slot unavailable" style="grid-area: 1/1">
-                            9:00 AM
-                        </div>
-                        <div class="time-slot unavailable" style="grid-area: 2/1">
-                            9:30 AM
-                        </div>
-                        <div class="time-slot unavailable" style="grid-area: 3/1">
-                            10:00 AM
-                        </div>
-                        <div class="time-slot unavailable" style="grid-area: 4/1">
-                            10:30 AM
-                        </div>
-                        <div
-                            class="time-slot"
-                            style="grid-area: 1/2"
-                            data-appointmenttime="12/21/2020 11:00:00 AM"
-                            onclick={toggleSelection}
+            <div class="reit-appointment-scheduler">
+                <div class="btn-group btn-group-date-pick">
+                    <div class="arrow arrow-left" data-link="12-20-2020">&lt;</div>
+                        <button type="button" class="btn btn-group-item" data-link="12-20-2020">
+                            <span>Today</span> Dec 20
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-group-item selected"
+                            data-link="12-21-2020"
                         >
-                            11:00 AM
+                            <span>Monday</span> Dec 21
+                        </button>
+                        <button type="button" class="btn btn-group-item" data-link="12-22-2020">
+                            <span>Tuesday</span> Dec 22
+                        </button>
+                    <div class="arrow arrow-right" data-link="12-22-2020">&gt;</div>
+                </div>
+                <div class="date-box">
+                    <div class="row">
+                        <div class="column-container">
+                            <div class="time-slot unavailable" style="grid-area: 1/1">
+                                9:00 AM
+                            </div>
+                            <div class="time-slot unavailable" style="grid-area: 2/1">
+                                9:30 AM
+                            </div>
+                            <div class="time-slot unavailable" style="grid-area: 3/1">
+                                10:00 AM
+                            </div>
+                            <div class="time-slot unavailable" style="grid-area: 4/1">
+                                10:30 AM
+                            </div>
+                            <div
+                                class="time-slot"
+                                style="grid-area: 1/2"
+                                data-appointmenttime="12/21/2020 11:00:00 AM"
+                                onclick={toggleSelection}
+                            >
+                                11:00 AM
+                            </div>
+                            <div
+                                class="time-slot"
+                                style="grid-area: 2/2"
+                                data-appointmenttime="12/21/2020 11:30:00 AM"
+                                onclick={toggleSelection}
+                            >
+                                11:30 AM
+                            </div>
+                            <div
+                                class="time-slot"
+                                style="grid-area: 3/2"
+                                data-appointmenttime="12/21/2020 12:00:00 PM"
+                                onclick={toggleSelection}
+                            >
+                                12:00 PM
+                            </div>
+                            <div
+                                class="time-slot"
+                                style="grid-area: 4/2"
+                                data-appointmenttime="12/21/2020 12:30:00 PM"
+                                onclick={toggleSelection}
+                            >
+                                12:30 PM
+                            </div>
+                            <div class="time-slot unavailable" style="grid-area: 1/3">
+                                1:00 PM
+                            </div>
+                            <div class="time-slot unavailable" style="grid-area: 2/3">
+                                1:30 PM
+                            </div>
+                            <div
+                                class="time-slot"
+                                style="grid-area: 3/3"
+                                data-appointmenttime="12/21/2020 2:00:00 PM"
+                                onclick={toggleSelection}
+                            >
+                                2:00 PM
+                            </div>
+                            <div
+                                class="time-slot"
+                                style="grid-area: 4/3"
+                                data-appointmenttime="12/21/2020 2:30:00 PM"
+                                onclick={toggleSelection}
+                            >
+                                2:30 PM
+                            </div>
+                            <div
+                                class="time-slot"
+                                style="grid-area: 1/4"
+                                data-appointmenttime="12/21/2020 3:00:00 PM"
+                                onclick={toggleSelection}
+                            >
+                                3:00 PM
+                            </div>
+                            <div class="time-slot unavailable" style="grid-area: 2/4">
+                                3:30 PM
+                            </div>
+                            <div
+                                class="time-slot"
+                                style="grid-area: 3/4"
+                                data-appointmenttime="12/21/2020 4:00:00 PM"
+                                onclick={toggleSelection}
+                            >
+                                4:00 PM
+                            </div>
+                            <div
+                                class="time-slot"
+                                style="grid-area: 4/4"
+                                data-appointmenttime="12/21/2020 4:30:00 PM"
+                                onclick={toggleSelection}
+                            >
+                                4:30 PM
+                            </div>
+                            <div
+                                class="time-slot"
+                                style="grid-area: 1/5"
+                                data-appointmenttime="12/21/2020 5:00:00 PM"
+                                onclick={toggleSelection}
+                            >
+                                5:00 PM
+                            </div>
+                            <div
+                                class="time-slot"
+                                style="grid-area: 2/5"
+                                data-appointmenttime="12/21/2020 5:30:00 PM"
+                                onclick={toggleSelection}
+                            >
+                                5:30 PM
+                            </div>
+                            <div id="calendar_loading" class="hidden"></div>
                         </div>
-                        <div
-                            class="time-slot"
-                            style="grid-area: 2/2"
-                            data-appointmenttime="12/21/2020 11:30:00 AM"
-                            onclick={toggleSelection}
-                        >
-                            11:30 AM
-                        </div>
-                        <div
-                            class="time-slot"
-                            style="grid-area: 3/2"
-                            data-appointmenttime="12/21/2020 12:00:00 PM"
-                            onclick={toggleSelection}
-                        >
-                            12:00 PM
-                        </div>
-                        <div
-                            class="time-slot"
-                            style="grid-area: 4/2"
-                            data-appointmenttime="12/21/2020 12:30:00 PM"
-                            onclick={toggleSelection}
-                        >
-                            12:30 PM
-                        </div>
-                        <div class="time-slot unavailable" style="grid-area: 1/3">
-                            1:00 PM
-                        </div>
-                        <div class="time-slot unavailable" style="grid-area: 2/3">
-                            1:30 PM
-                        </div>
-                        <div
-                            class="time-slot"
-                            style="grid-area: 3/3"
-                            data-appointmenttime="12/21/2020 2:00:00 PM"
-                            onclick={toggleSelection}
-                        >
-                            2:00 PM
-                        </div>
-                        <div
-                            class="time-slot"
-                            style="grid-area: 4/3"
-                            data-appointmenttime="12/21/2020 2:30:00 PM"
-                            onclick={toggleSelection}
-                        >
-                            2:30 PM
-                        </div>
-                        <div
-                            class="time-slot"
-                            style="grid-area: 1/4"
-                            data-appointmenttime="12/21/2020 3:00:00 PM"
-                            onclick={toggleSelection}
-                        >
-                            3:00 PM
-                        </div>
-                        <div class="time-slot unavailable" style="grid-area: 2/4">
-                            3:30 PM
-                        </div>
-                        <div
-                            class="time-slot"
-                            style="grid-area: 3/4"
-                            data-appointmenttime="12/21/2020 4:00:00 PM"
-                            onclick={toggleSelection}
-                        >
-                            4:00 PM
-                        </div>
-                        <div
-                            class="time-slot"
-                            style="grid-area: 4/4"
-                            data-appointmenttime="12/21/2020 4:30:00 PM"
-                            onclick={toggleSelection}
-                        >
-                            4:30 PM
-                        </div>
-                        <div
-                            class="time-slot"
-                            style="grid-area: 1/5"
-                            data-appointmenttime="12/21/2020 5:00:00 PM"
-                            onclick={toggleSelection}
-                        >
-                            5:00 PM
-                        </div>
-                        <div
-                            class="time-slot"
-                            style="grid-area: 2/5"
-                            data-appointmenttime="12/21/2020 5:30:00 PM"
-                            onclick={toggleSelection}
-                        >
-                            5:30 PM
-                        </div>
-                        <div id="calendar_loading" class="hidden"></div>
                     </div>
+                </div>
+            </div>
+            <div class="reit-appointment-form">
+                <div class="reit-appointment-form-fields">
+                    <lightning-input type="text" label="First Name" value="Frank"></lightning-input>
+                    <lightning-input type="text" label="Last Name" value="Caron"></lightning-input>
+                    <lightning-input type="text" label="Comment" value="Your comment"></lightning-input>
+                    <lightning-input type="email" label="Email" value="frank@frankcaron.com"></lightning-input>
+                    <lightning-input type="tel" label="Phone" value="123-123-1234" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"></lightning-input>
+                </div>
+                <div class="reit-appointment-form-submit">
+                    <lightning-button variant="brand" label="Book" title="Book Appointment" onclick={createAppointment} class="slds-m-left_x-small"></lightning-button>
                 </div>
             </div>
         </lightning-card>

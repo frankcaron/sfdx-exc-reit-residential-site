@@ -3,8 +3,19 @@
 }
 
 .reit-appointment-header {
-    margin-bottom: .5rem;
     font-weight: bolder;
+}
+
+/* ============== Scheduler ============= */
+
+.reit-appointment-scheduler-holder {
+    padding-bottom: 10px;
+}
+
+.arrow {
+    margin: 10px;
+    color: #999;
+    font-size: 12pt;
 }
 
 .btn-group-date-pick {
@@ -15,8 +26,6 @@
 .btn-group-date-pick .btn-group-item {
     font-size: 16px;
     border: none;
-    border-right: 1px solid #ccc;
-    height: 35px;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -34,15 +43,16 @@
     cursor: pointer;
     margin-top: 10px;
     margin-bottom: 10px;
+    background-color: #fff;
 }
 
 .btn-group-item.selected {
-    background-color: #ec008c;
+    background-color: var(--sds-c-button-brand-color-background, var(--lwc-brandAccessible,rgb(0, 112, 210))) !important;
     color: #fff;
 }
 
 .time-slot.selected {
-    background-color: #ec008c;
+    background-color: var(--sds-c-button-brand-color-background, var(--lwc-brandAccessible,rgb(0, 112, 210)));
     color: #fff;
 }
 
@@ -51,7 +61,6 @@
 }
 
 .date-box {
-    border: 1px solid #ccc;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -62,6 +71,8 @@
     font-size: .7rem;
     font-weight: 600;
     padding: 10px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 .column-container {
@@ -84,3 +95,14 @@
     color: #ccc;
 }
 
+/* ==================== Input Form ==================== */
+
+.reit-appointment-form {
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+.reit-appointment-form-submit {
+    text-align: right;
+    margin-top: 10px;
+}
