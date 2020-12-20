@@ -182,6 +182,13 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
+        <fields>Unit_Number__c</fields>
+        <fields>Occupied__c</fields>
+        <fields>Current_Rate__c</fields>
+        <relatedList>Property_Unit__c.Property__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
         <fields>CREATED_DATE</fields>
         <fields>LAST_UPDATE</fields>
         <fields>CREATEDBY_USER</fields>
@@ -205,10 +212,6 @@
         <fields>CORE.USERS.FULL_NAME</fields>
         <fields>TASK.LAST_UPDATE</fields>
         <relatedList>RelatedHistoryList</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <relatedList>Property_Unit__c.Property__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
