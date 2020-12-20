@@ -153,15 +153,16 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
-    <label>Property</label>
+    <label>Amenity</label>
     <nameField>
-        <displayFormat>PROP-{00000}</displayFormat>
-        <label>Property Id</label>
+        <displayFormat>AM-{00000}</displayFormat>
+        <label>Amenitiy Name</label>
         <trackHistory>false</trackHistory>
         <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>Properties</pluralLabel>
+    <pluralLabel>Amenities</pluralLabel>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
+    <startsWith>Vowel</startsWith>
     <visibility>Public</visibility>
 </CustomObject>

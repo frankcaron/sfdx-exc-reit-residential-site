@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type --></label>
+    <name>Type__c</name>
+    <picklistValues>
+        <masterLabel>BBQ</masterLabel>
+        <translation><!-- BBQ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bike Storage</masterLabel>
+        <translation><!-- Bike Storage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Daycare</masterLabel>
+        <translation><!-- Daycare --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fitness Center</masterLabel>
+        <translation><!-- Fitness Center --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Game Room</masterLabel>
+        <translation><!-- Game Room --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lounge</masterLabel>
+        <translation><!-- Lounge --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Parking</masterLabel>
+        <translation><!-- Parking --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Party Room</masterLabel>
+        <translation><!-- Party Room --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Spa</masterLabel>
+        <translation><!-- Spa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Storage Locker</masterLabel>
+        <translation><!-- Storage Locker --></translation>
+    </picklistValues>
+</CustomFieldTranslation>
