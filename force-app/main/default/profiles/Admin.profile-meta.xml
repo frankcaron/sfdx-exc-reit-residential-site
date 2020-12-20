@@ -72,6 +72,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Rental_Property__c.Offer_Count__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Rental_Property__c.Office_Email__c</field>
         <readable>true</readable>
@@ -125,6 +130,9 @@
         <layout>PropertyAmenitiy__c-Amenity Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Property_Offers__c-Property Offer Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Rental_Property__c-Rental Property Layout</layout>
     </layoutAssignments>
     <objectPermissions>
@@ -142,6 +150,15 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
+        <object>Property_Offers__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
         <object>Rental_Property__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
@@ -151,6 +168,10 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>PropertyAmenitiy__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Property_Offers__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
