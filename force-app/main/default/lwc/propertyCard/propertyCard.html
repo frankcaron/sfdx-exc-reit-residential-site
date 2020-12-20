@@ -1,12 +1,12 @@
 <template>
     <div class="reit-property-card-container">
         <div class="reit-property-card-image">
-            <div class="reit-property-card-promo">2 Offers Available</div>
+            <div class="reit-property-card-promo">{property.offers} Offer(s) Available</div>
             <img src={property.img} />
         </div>
         <div class="reit-property-card-description">
             <h1>{property.title}</h1>
-            <p>This is a property description.</p>
+            <p>{property.description}</p>
             <div class="reit-property-card-description-cta">
                 <div class="reit-property-card-description-prices">
                     <p>Studios from <strong>${property.studio}</strong></p>
