@@ -37,6 +37,26 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Property_Unit__c.Current_Rate__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Property_Unit__c.Occupied__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Property_Unit__c.Tenant__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Property_Unit__c.Unit_Number__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Rental_Property__c.Building_Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -127,11 +147,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Rental_Property__c.Unit__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Rental_Property__c.Utilities_Covered__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -147,6 +162,9 @@
         <layout>Property_Offers__c-Property Offer Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Property_Unit__c-Unit Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Rental_Property__c-Rental Property Layout</layout>
     </layoutAssignments>
     <tabVisibilities>
@@ -159,6 +177,10 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>Property_Offers__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Property_Unit__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
