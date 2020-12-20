@@ -2,13 +2,13 @@
     <div class="reit-properties-container">
         <template if:true={properties}>
             <lightning-card title="Hot Properties">
-                <lightning-button label="New" slot="actions"></lightning-button>
+                <lightning-button label="New" onclick={navigateToCreatePropertyPage} slot="actions"></lightning-button>
                 <template for:each={properties} for:item="property">
                     <div key={property.id} class="reit-property-container">
                         <c-property-card property={property}></c-property-card>
                     </div>
                 </template>
-                <p slot="footer"><a href="#">View All</a></p>
+                <p slot="footer"><a onclick={navigateToPropertyList}>View All</a></p>
         </lightning-card>
         </template>
     </div>

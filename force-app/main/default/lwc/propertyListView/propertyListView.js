@@ -1,6 +1,11 @@
 import { LightningElement, api, wire } from 'lwc';
+import { NavigationMixin } from 'lightning/navigation';
 
-export default class PropertyListView extends LightningElement {
+export default class PropertyListView extends NavigationMixin(LightningElement) {
+
+    //Properties
+    @api
+    numResults;
 
     //Variables
     @api
@@ -11,5 +16,31 @@ export default class PropertyListView extends LightningElement {
 
     //@api
     //properties;
+
+
+    // Navigate to the record list page for the object
+    navigateToPropertyList() {
+        this[NavigationMixin.Navigate]({
+            type: 'standard__objectPage',
+            attributes: {
+                objectApiName: 'Rental_Property__c',
+                actionName: 'list'
+            },
+            state: {
+                filterName: 'All'
+            }
+        });
+    }
+
+    // Navigate to the record list page for the object
+    navigateToCreatePropertyPage() {
+        this[NavigationMixin.Navigate]({
+            type: 'standard__objectPage',
+            attributes: {
+                objectApiName: 'Rental_Property__c',
+                actionName: 'new'
+            }
+        });
+    }
 
 }
