@@ -72,6 +72,21 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Property_Viewing__c.Contact__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Property_Viewing__c.Viewing_Time__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Property_Viewing__c.Visited__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Rental_Property__c.Building_Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -183,6 +198,9 @@
         <layout>Property_Unit__c-Unit Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Property_Viewing__c-Viewing Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Rental_Property__c-Rental Property Layout</layout>
     </layoutAssignments>
     <tabVisibilities>
@@ -203,6 +221,10 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>Property_Unit__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Property_Viewing__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>

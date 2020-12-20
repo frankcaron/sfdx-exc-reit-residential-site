@@ -114,10 +114,34 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <componentInstanceProperties>
+                    <name>comment</name>
+                    <value>Hey there!</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>email</name>
+                    <value>frank@frankcaron.com</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>firstName</name>
+                    <value>Frank</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>lastName</name>
+                    <value>Caron</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>operatingMode</name>
+                    <value>Amenity</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>phone</name>
+                    <value>555-555-5555</value>
+                </componentInstanceProperties>
                 <componentName>amenitySchedule</componentName>
             </componentInstance>
         </itemInstances>
-        <name>Facet-50ebeaa5-27a6-4058-8f7a-ab1e05c4608c</name>
+        <name>Facet-05b96088-05ea-484e-8bb4-a410aa6d39f0</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -157,7 +181,7 @@
             <componentInstance>
                 <componentInstanceProperties>
                     <name>body</name>
-                    <value>Facet-50ebeaa5-27a6-4058-8f7a-ab1e05c4608c</value>
+                    <value>Facet-05b96088-05ea-484e-8bb4-a410aa6d39f0</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>title</name>

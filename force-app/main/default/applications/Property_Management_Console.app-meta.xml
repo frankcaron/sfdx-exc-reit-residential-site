@@ -13,7 +13,9 @@
     <navType>Standard</navType>
     <tabs>Operations_Hub</tabs>
     <tabs>Rental_Property__c</tabs>
-    <tabs>PropertyAmenitiy__c</tabs>
+    <tabs>Property_Offers__c</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Contact</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Property_Management_Console_UtilityBar</utilityBar>
 </CustomApplication>

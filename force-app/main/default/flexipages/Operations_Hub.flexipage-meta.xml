@@ -7,6 +7,10 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <componentInstanceProperties>
+                    <name>numResults</name>
+                    <value>5</value>
+                </componentInstanceProperties>
                 <componentName>propertyListView</componentName>
             </componentInstance>
         </itemInstances>
@@ -14,6 +18,51 @@
         <type>Region</type>
     </flexiPageRegions>
     <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>entityNames</name>
+                    <valueList>
+                        <valueListItems>
+                            <value>Amenity_Booking__c</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Property_Viewing__c</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Case</value>
+                        </valueListItems>
+                    </valueList>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>label</name>
+                    <value>Recently Viewed</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>maxRecords</name>
+                    <value>5</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:recentItems</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>context</name>
+                    <value>GLOBAL</value>
+                </componentInstanceProperties>
+                <componentName>forceChatter:publisher</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>context</name>
+                    <value>BOOKMARKS</value>
+                </componentInstanceProperties>
+                <componentName>forceChatter:exposedFeed</componentName>
+            </componentInstance>
+        </itemInstances>
         <name>region3</name>
         <type>Region</type>
     </flexiPageRegions>
