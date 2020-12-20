@@ -8,12 +8,14 @@ public with sharing class reitPropertyDataHelper {
     //Apex method to fetch REIT property data
     @AuraEnabled (cacheable=true)
     public static List<Rental_Property__c> getPropertyList(Integer lim) {
-        List<Rental_Property__c> listToReturn = [SELECT Name,
+        List<Rental_Property__c> listToReturn = [SELECT Id,
+                                                        Name,
                                                         Nickname__c,
                                                         Street_Address__c,
                                                         State__c,
                                                         City__c,
                                                         Country__c,
+                                                        ZIP__c,
                                                         Unit__c,
                                                         Description__c,
                                                         Image__c,

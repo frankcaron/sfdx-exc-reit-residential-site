@@ -6,6 +6,7 @@
     margin: 0px;
     padding: 0px;
     border-radius: 5px;
+    max-height: 225px;
 }
 .reit-property-card-container:hover {
     animation-name: shadowFade;
@@ -17,7 +18,6 @@
     display: block;
     width: 40%;
     border-radius: 5px 0px 0px 5px;
-    max-height: 210px;
     object-fit: cover;
     overflow: hidden;
 
@@ -46,6 +46,12 @@
     vertical-align: top;
 }
 
+.reit-property-card-description-copy {
+    font-style: italic;
+    color: #AAA;
+    margin-top: 10px;
+}
+
 .reit-property-card-description h1 {
     font-weight: 700;
     font-size: 20pt;
@@ -58,7 +64,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    margin-top: 4em;
+    margin-top: 3.5em;
 }
 .reit-property-card-description-prices {
     align-self: flex-start;
