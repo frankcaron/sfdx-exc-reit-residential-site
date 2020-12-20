@@ -161,6 +161,13 @@
         <style>CustomLinks</style>
     </layoutSections>
     <relatedLists>
+        <fields>NAME</fields>
+        <fields>Nickname__c</fields>
+        <fields>Type__c</fields>
+        <fields>Monthly_Cost__c</fields>
+        <relatedList>PropertyAmenitiy__c.Rental_Property__c</relatedList>
+    </relatedLists>
+    <relatedLists>
         <fields>TASK.SUBJECT</fields>
         <fields>TASK.WHO_NAME</fields>
         <fields>ACTIVITY.TASK</fields>
@@ -178,10 +185,6 @@
         <fields>CORE.USERS.FULL_NAME</fields>
         <fields>TASK.LAST_UPDATE</fields>
         <relatedList>RelatedHistoryList</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <relatedList>PropertyAmenitiy__c.Rental_Property__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
