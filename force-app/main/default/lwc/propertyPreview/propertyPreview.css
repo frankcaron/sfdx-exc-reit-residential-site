@@ -1,3 +1,11 @@
-div {
+.reit-property-preview {
+    margin: 5px;
+}
 
+.reit-property-preview img {
+    border: 1px solid #ddd;
+}
+
+.reit-property-preview h1 {
+    font-weight: bolder;
 }
