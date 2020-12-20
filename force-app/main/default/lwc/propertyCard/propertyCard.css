@@ -1,3 +1,33 @@
-div {
+.reit-property-card-container {
+    display: flex;
+    width: 100%;
+    min-width: 100%;
+    border: 1px solid #bbb;
+    margin: 0px;
     padding: 0px;
+    border-radius: 5px;
+}
+.reit-property-card-container:hover {
+    box-shadow: 2px 2px 5px 2px #BBB;
+}
+.reit-property-card-image {
+    display: inline-flex;
+    width: 40%;
+}
+.reit-property-card-description {
+    max-width: 60%;
+    margin: 1em;
+    width: 60%;
+    display: block;
+    vertical-align: top;
+}
+
+.reit-property-card-description h1 {
+    font-weight: 700;
+    font-size: 20pt;
+    text-transform: capitalize;
+}
+
+.reit-property-card-description .reit-property-card-description-prices {
+    bottom: 0px;
 }

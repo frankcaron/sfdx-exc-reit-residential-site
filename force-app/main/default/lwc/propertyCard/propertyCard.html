@@ -1,3 +1,16 @@
 <template>
-    {property.title}
+    <div class="reit-property-card-container">
+        <div class="reit-property-card-image">
+            <img src={property.img} />
+        </div>
+        <div class="reit-property-card-description">
+            <h1>{property.title}</h1>
+            <p>This is a property description.</p>
+            <div class="reit-property-card-description-prices">
+                <p>Studios from $1000</p>
+                <p>1 Bedrooms from $2000</p>
+                <p>2 Bedrooms from $3000</p>
+            </div>
+        </div>
+    </div>
 </template>
