@@ -14,12 +14,33 @@
     animation-fill-mode: forwards;
 }
 .reit-property-card-image {
-    display: inline-flex;
+    display: block;
     width: 40%;
+    border-radius: 5px 0px 0px 5px;
+    max-height: 210px;
+    object-fit: cover;
+    overflow: hidden;
+
+}
+.reit-property-card-image img {
+    border-radius: 0px 0px 0px 5px;
+}
+.reit-property-card-promo {
+    position: relative;
+    z-index: 1;
+    top: 0px;
+    width: 100%;
+    font-size: 8pt;
+    background-color: #f9d465;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px 0px 0px 0px;
 }
 .reit-property-card-description {
     max-width: 60%;
     margin: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
     width: 60%;
     display: block;
     vertical-align: top;
@@ -31,8 +52,38 @@
     text-transform: capitalize;
 }
 
-.reit-property-card-description .reit-property-card-description-prices {
-    bottom: 0px;
+.reit-property-card-description-cta {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 4em;
+}
+.reit-property-card-description-prices {
+    align-self: flex-start;
+}
+
+.reit-property-card-description-button {
+    align-self: flex-end;
+}
+
+.reit-property-book-tour-button {
+    display: inline-block;
+    background-color: #002d72;
+    height: 2.25em;
+    cursor: pointer;
+    line-height: 1.5em;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.reit-property-book-tour-button:hover {
+    background-color: #002e72c7;
+    text-decoration: none;
 }
 
 /* ========= Animations ========== */
