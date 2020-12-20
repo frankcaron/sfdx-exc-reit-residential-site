@@ -1,0 +1,90 @@
+.reit-appointment-booker {
+    background-color: #fff;
+    margin: 20px;
+    border: 1px solid #eee;
+}
+
+.reit-appointment-header {
+    margin-bottom: .5rem;
+    font-weight: bolder;
+    font-size: 1em;
+    margin: 10px;
+}
+
+.btn-group-date-pick {
+    display: flex;
+    align-items: center;
+}
+
+.btn-group-date-pick .btn-group-item {
+    font-size: 16px;
+    border: none;
+    border-right: 1px solid #ccc;
+    height: 35px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 32%;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-group-item.selected {
+    background-color: #ec008c;
+    color: #fff;
+}
+
+.time-slot.selected {
+    background-color: #ec008c;
+    color: #fff;
+}
+
+.btn-group>.btn, .btn-group-vertical>.btn {
+    flex: 0 1 auto;
+}
+
+.date-box {
+    border: 1px solid #ccc;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-evenly;
+    justify-content: space-evenly;
+    font-size: .7rem;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.column-container {
+    display: grid;
+    grid-gap: 10px;
+    padding: 10px 0;
+    position: relative;
+    min-height: 64px;
+}
+
+.column-container .time-slot {
+    cursor: pointer;
+    color: var(--dark);
+    padding: 15px 8px;
+    text-align: center;
+}
+
+.column-container .time-slot.unavailable {
+    cursor: not-allowed;
+    color: #ccc;
+}
+
