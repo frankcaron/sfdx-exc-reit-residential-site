@@ -2,13 +2,16 @@
     display: flex;
     width: 100%;
     min-width: 100%;
-    border: 1px solid #bbb;
+    border: 1px solid #ddd;
     margin: 0px;
     padding: 0px;
     border-radius: 5px;
 }
 .reit-property-card-container:hover {
-    box-shadow: 2px 2px 5px 2px #BBB;
+    animation-name: shadowFade;
+    animation-duration: 0.5s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
 }
 .reit-property-card-image {
     display: inline-flex;
@@ -30,4 +33,14 @@
 
 .reit-property-card-description .reit-property-card-description-prices {
     bottom: 0px;
+}
+
+/* ========= Animations ========== */
+@keyframes shadowFade {
+    0% {
+        box-shadow: none;
+    }
+    100% {
+        box-shadow: 2px 2px 10px 2px #DDD;
+    }
 }
