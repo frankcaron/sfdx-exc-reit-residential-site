@@ -56,7 +56,7 @@ export default class AmenitySchedule extends LightningElement {
         this.error = null;
 
         //Call Apex Controller To Created Booking
-        bookAmenity({ email: this.selectedEmail, timeSlot: this.selectedTime, amenity: this.recordId})
+        bookAmenity({ email: this.selectedEmail, timeSlot: this.selectedTime, amenity: this.recordId, operatingMode: this.operatingMode})
             .then((result) => {
                 if (result) {
                     console.log("REIT Amenity Schedule || Successfully created booking.");

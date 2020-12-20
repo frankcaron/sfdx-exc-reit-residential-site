@@ -28,30 +28,35 @@ public with sharing class reitPropertyDataHelper {
 
     //Apex method to create Booking against an Amenity
     @AuraEnabled (cacheable=false)
-    public static Boolean bookAmenity(String email, String timeSlot, String amenity) {
+    public static Boolean bookAmenity(String email, String timeSlot, String amenity, String operatingMode) {
 
-        System.debug('REIT Amenity Schedule || Email is... ' + email);
-        System.debug('REIT Amenity Schedule || Timeslot is... ' + timeSlot);
-        System.debug('REIT Amenity Schedule || Amenity is... ' + amenity);
+        System.debug('REIT Appointment Schedule || Email is... ' + email);
+        System.debug('REIT Appointment Schedule || Timeslot is... ' + timeSlot);
+        System.debug('REIT Appointment Schedule || Amenity is... ' + amenity);
 
         //Find contact
         List<Contact> contactToUse = [SELECT Id, email FROM Contact WHERE email = :email LIMIT 1];
 
-        //Create Booking
-        try {
-            Amenity_Booking__c newBooking = new Amenity_Booking__c();
+        if (operatingMode == 'Amenity') {
+            //Create Amenity Booking
+            try {
+                Amenity_Booking__c newBooking = new Amenity_Booking__c();
 
-            newBooking.Booking_Time__c = DateTime.valueOf(timeSlot);
-            newBooking.Amenity__c = amenity;
-            if (contactToUse.size() > 0) {
-                newBooking.Contact__c = contactToUse[0].Id;
+                newBooking.Booking_Time__c = DateTime.valueOf(timeSlot);
+                newBooking.Amenity__c = amenity;
+                if (contactToUse.size() > 0) {
+                    newBooking.Contact__c = contactToUse[0].Id;
+                }
+                insert newBooking;
+                System.debug('REIT Amenity Schedule || Created Booking successfully.');
+                return true;
+            } catch(DmlException e) {
+                System.debug('REIT Amenity Schedule || The following exception has occurred: ' + e.getMessage());
+                return false;
             }
-            insert newBooking;
-            System.debug('REIT Amenity Schedule || Created Booking successfully.');
-            return true;
-        } catch(DmlException e) {
-            System.debug('REIT Amenity Schedule || The following exception has occurred: ' + e.getMessage());
-            return false;
+        } else if (operatingMode == 'Property') {
+            //Create Property Viewing
+
         }
     }
 
