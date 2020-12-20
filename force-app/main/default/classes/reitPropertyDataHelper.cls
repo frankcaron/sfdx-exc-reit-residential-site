@@ -29,8 +29,8 @@ public with sharing class reitPropertyDataHelper {
     //Apex method to create Booking against an Amenity
     @AuraEnabled (cacheable=true)
     public static Boolean bookAmenity(String email, String timeSlot) {
-        System.debug(email);
-        System.debug(timeSlot);
+        System.debug('Email is... ' + email);
+        System.debug('Timeslot is... ' + timeSlot);
 
         return true;
     }

@@ -1,5 +1,5 @@
 import { LightningElement, api } from 'lwc';
-import bookAmenity from '@salesforce/apex/reitPropertyDataHelper.getPropertyList';
+import bookAmenity from '@salesforce/apex/reitPropertyDataHelper.bookAmenity';
 
 export default class AmenitySchedule extends LightningElement {
 
