@@ -11,7 +11,7 @@
     </targets>
     <targetConfigs>
         <targetConfig targets="lightningCommunity__Default,lightning__AppPage,lightning__HomePage">
-            <property name="numResults" label="List Size" type="String" description="The number of records to display in the list" required="true" default="5" />
+            <property name="numResults" label="List Size" type="Integer" description="The number of records to display in the list" required="true" default="5" />
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>

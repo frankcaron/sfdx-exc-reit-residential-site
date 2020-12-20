@@ -1,5 +1,6 @@
 import { LightningElement, api, wire } from 'lwc';
 import { NavigationMixin } from 'lightning/navigation';
+import getPropertyList from '@salesforce/apex/reitPropertyDataHelper.getPropertyList';
 
 export default class PropertyListView extends NavigationMixin(LightningElement) {
 
@@ -8,15 +9,26 @@ export default class PropertyListView extends NavigationMixin(LightningElement) 
     numResults;
 
     //Variables
-    @api
-    properties = [
-        { id: 123, title: "AVA 55 Ninth", description: "This is a property description.", offers: 2, studio: 500, oneBed: 1000, twoBed: 2000, img: "https://media.gettyimages.com/photos/large-multicondos-building-blocks-with-bicycles-lane-picture-id1174752803?s=612x612"},
-        { id: 234, title: "AVA Sunset", description: "This is another property description.", offers: 1, studio: 800, oneBed: 1200, twoBed: 1900, img: "https://media.gettyimages.com/photos/large-multicondos-building-blocks-with-bicycles-lane-picture-id1174752803?s=612x612"}
-    ];
+    properties;
 
-    //@api
-    //properties;
-
+    //Data Wire
+    @wire(getPropertyList, { lim: '$numResults' })
+    wiredProperties({ error, data }) {
+        console.log("REIT Property Fetch || Trying to fetch property records...");
+        if (data) {
+            console.log("REIT Property Fetch || Found records!");
+            console.log(data);
+            this.properties = data;
+            this.error = undefined;
+        } else if (error) {
+            console.log("REIT Property Fetch || Failed to find records");
+            console.log(error);
+            this.error = error;
+            this.properties = undefined;
+        } else {
+            console.log("REIT Property Fetch || Something went wrong.");
+        }
+    }
 
     // Navigate to the record list page for the object
     navigateToPropertyList() {

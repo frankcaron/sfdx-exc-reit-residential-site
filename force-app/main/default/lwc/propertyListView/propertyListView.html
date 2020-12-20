@@ -4,7 +4,7 @@
             <lightning-card title="Hot Properties">
                 <lightning-button label="New" onclick={navigateToCreatePropertyPage} slot="actions"></lightning-button>
                 <template for:each={properties} for:item="property">
-                    <div key={property.id} class="reit-property-container">
+                    <div key={property.Name} class="reit-property-container">
                         <c-property-card property={property}></c-property-card>
                     </div>
                 </template>
