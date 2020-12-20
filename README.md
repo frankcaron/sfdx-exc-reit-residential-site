@@ -1,18 +1,44 @@
-# Salesforce DX Project: Next Steps
+# Salesforce Platform - REIT Residential Tenant Portal Model
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+![Status](https://img.shields.io/badge/status-Beta-yellowgreen)
+![Geography](https://img.shields.io/badge/Geography-US-blue)
 
-## How Do You Plan to Deploy Your Changes?
+This Salesforce DX (SFDX) repository contains a built out data model, various page customizations, a new Lightning app, and a handful of custom Lightning Web Components that enable you to rapidly roll out a tenant portal for REIT's managing residential buildings. The customizations are designed to support both the internal tenant management for employees of the REIT as well as the Experience Cloud tenant portal.
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+# Data Model and Structure
 
-## Configure Your Salesforce DX Project
+The package introduces the following additional objects:
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+* Rental Properties
+* Property Units
+* Property Amenities
+* Property Amenity Bookings
+* Property Special Offers
 
-## Read All About It
+Each of these objects has been built out with custom pages and page layouts as well as relevant fields. Properties are the overarching object, with Unit and Amenities being related back to the Property. Offers and Bookings are master-details of Properties and Amenities, respectively.
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+These objects have all been packaged up with a `Property Management Console` app and a handful of custom components that can be used in both an Experience Site and in the Console app itself, including:
+
+* An interactive Amenity Scheduler
+* A visual Property List component
+* A visual Property Preview component
+
+# Prereqs
+
+In order to use this app, you'll need to ensure that you have...
+
+* A Salesforce dev org
+* Knowledge of SFDX
+* Some JavaScript skills
+
+## Deploy
+
+Use SFDX, once connected to your Dev org's Dev Hub to deploy the source. The packaged LWCs are built entirely with vanilla JS, HTML, and CSS powered by the static resources included in the repo. The paired Apex classes will be deployed alongside these LWC.
+
+# To Do
+
+1. Build out more.
+
+# Etc.
+
+Created with love by Frank Caron.
