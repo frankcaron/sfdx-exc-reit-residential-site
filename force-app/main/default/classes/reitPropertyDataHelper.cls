@@ -28,11 +28,11 @@ public with sharing class reitPropertyDataHelper {
 
     //Apex method to create Booking against an Amenity
     @AuraEnabled (cacheable=false)
-    public static Boolean bookAmenity(String email, String timeSlot, String amenity, String operatingMode) {
+    public static Boolean bookAppointment(String email, String timeSlot, String amenityOrProperty, String operatingMode) {
 
         System.debug('REIT Appointment Schedule || Email is... ' + email);
         System.debug('REIT Appointment Schedule || Timeslot is... ' + timeSlot);
-        System.debug('REIT Appointment Schedule || Amenity is... ' + amenity);
+        System.debug('REIT Appointment Schedule || Record is... ' + amenityOrProperty);
 
         //Find contact
         List<Contact> contactToUse = [SELECT Id, email FROM Contact WHERE email = :email LIMIT 1];
@@ -41,9 +41,8 @@ public with sharing class reitPropertyDataHelper {
             //Create Amenity Booking
             try {
                 Amenity_Booking__c newBooking = new Amenity_Booking__c();
-
                 newBooking.Booking_Time__c = DateTime.valueOf(timeSlot);
-                newBooking.Amenity__c = amenity;
+                newBooking.Amenity__c = amenityOrProperty;
                 if (contactToUse.size() > 0) {
                     newBooking.Contact__c = contactToUse[0].Id;
                 }
@@ -56,7 +55,23 @@ public with sharing class reitPropertyDataHelper {
             }
         } else if (operatingMode == 'Property') {
             //Create Property Viewing
-
+            try {
+                Property_Viewing__c newBooking = new Property_Viewing__c();
+                newBooking.Viewing_Time__c = DateTime.valueOf(timeSlot);
+                newBooking.Property__c = amenityOrProperty;
+                if (contactToUse.size() > 0) {
+                    newBooking.Contact__c = contactToUse[0].Id;
+                }
+                insert newBooking;
+                System.debug('REIT Viewing Schedule || Created Booking successfully.');
+                return true;
+            } catch(DmlException e) {
+                System.debug('REIT Viewing Schedule || The following exception has occurred: ' + e.getMessage());
+                return false;
+            }
+        } else {
+            System.debug('REIT Appoitment Schedule || Type is not known');
+            return false;
         }
     }
 
