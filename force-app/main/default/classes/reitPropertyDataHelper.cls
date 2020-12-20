@@ -16,7 +16,6 @@ public with sharing class reitPropertyDataHelper {
                                                         City__c,
                                                         Country__c,
                                                         ZIP__c,
-                                                        Unit__c,
                                                         Description__c,
                                                         Image__c,
                                                         Studio_Start_Price__c,

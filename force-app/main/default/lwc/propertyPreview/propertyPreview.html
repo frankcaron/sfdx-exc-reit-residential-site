@@ -1,3 +1,9 @@
 <template>
-    
+    <div class="reit-property-preview">
+        <template if:true={image}>
+            <lightning-card title="Preview">
+                <img src={imagePath} />
+        </lightning-card>
+        </template>
+    </div>
 </template>
