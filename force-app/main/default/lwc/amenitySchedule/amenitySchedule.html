@@ -150,11 +150,11 @@
                 </div>
                 <div class="reit-appointment-form">
                     <div class="reit-appointment-form-fields">
-                        <lightning-input type="text" label="First Name" value="Frank"></lightning-input>
-                        <lightning-input type="text" label="Last Name" value="Caron"></lightning-input>
-                        <lightning-input type="text" label="Comment" value="Your comment"></lightning-input>
-                        <lightning-input type="email" label="Email" value="frank@frankcaron.com" onchange={emailChange}></lightning-input>
-                        <lightning-input type="tel" label="Phone" value="123-123-1234" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"></lightning-input>
+                        <lightning-input type="text" label="First Name" value={firstName}></lightning-input>
+                        <lightning-input type="text" label="Last Name" value={lastName}></lightning-input>
+                        <lightning-input type="text" label="Comment" value={comment}></lightning-input>
+                        <lightning-input type="email" label="Email" value={email} onchange={emailChange}></lightning-input>
+                        <lightning-input type="tel" label="Phone" value={phone} pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"></lightning-input>
                     </div>
                     <div class="reit-appointment-form-submit">
                         <lightning-button variant="brand" label="Book" title="Book Appointment" onclick={createAppointment} class="slds-m-left_x-small"></lightning-button>
