@@ -35,6 +35,12 @@ In order to use this app, you'll need to ensure that you have...
 
 Use SFDX, once connected to your Dev org's Dev Hub to deploy the source. The packaged LWCs are built entirely with vanilla JS, HTML, and CSS powered by the static resources included in the repo. The paired Apex classes will be deployed alongside these LWC.
 
+You will also have to do the following, potentially:
+
+1. Repermission the System Admin to see all the object fields and tabs
+2. Repermission the System Admin to see the Property Management app
+3. Repermission the System Admin to see the Operations Hub Lightning page
+
 # To Do
 
 1. Build out more.
