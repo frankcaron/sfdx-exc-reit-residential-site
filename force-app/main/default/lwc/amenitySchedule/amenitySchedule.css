@@ -6,6 +6,11 @@
     font-weight: bolder;
 }
 
+.reit-appointment-scheduled {
+    margin: 0px;
+    margin-bottom: 30px;
+}
+
 /* ============== Scheduler ============= */
 
 .reit-appointment-scheduler-holder {
@@ -53,7 +58,7 @@
 
 .time-slot.selected {
     background-color: var(--sds-c-button-brand-color-background, var(--lwc-brandAccessible,rgb(0, 112, 210)));
-    color: #fff;
+    color: #fff !important;
 }
 
 .btn-group>.btn, .btn-group-vertical>.btn {

@@ -1,13 +1,20 @@
 import { LightningElement, api } from 'lwc';
+import bookAmenity from '@salesforce/apex/reitPropertyDataHelper.getPropertyList';
+
 export default class AmenitySchedule extends LightningElement {
 
     //Properties
     @api
     recordId;
 
+    @api
+    operatingMode;
+
     //Variables
     selectedElement;
     selectedTime;
+    selectedEmail;
+    booked = false;
 
     // Toggle Select
     toggleSelection(event){
@@ -32,8 +39,26 @@ export default class AmenitySchedule extends LightningElement {
         console.log("REIT Amenity Schedule || Selected Time: " + this.selectedTime);
     }
 
+    // Snag Email
+    emailChange(event) {
+        this.selectedEmail= event.target.value;
+    }
+
     // Create Record
     createAppointment() {
+
         //Create appointment
+        this.booked = true;
+
+        //Build amenity details
+
+        //Call Apex Controller To Created Booking
+        bookAmenity({ email: this.selectedEmail, timeSlot: this.selectedTime })
+            .then((result) => {
+                console.log(result);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
     }
 }

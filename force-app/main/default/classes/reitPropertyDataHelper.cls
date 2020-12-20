@@ -24,6 +24,15 @@ public with sharing class reitPropertyDataHelper {
                                                         Offer_Count__c
                                                 FROM Rental_Property__c LIMIT :lim];
         return listToReturn;
-
     }
+
+    //Apex method to create Booking against an Amenity
+    @AuraEnabled (cacheable=true)
+    public static Boolean bookAmenity(String email, String timeSlot) {
+        System.debug(email);
+        System.debug(timeSlot);
+
+        return true;
+    }
+
 }

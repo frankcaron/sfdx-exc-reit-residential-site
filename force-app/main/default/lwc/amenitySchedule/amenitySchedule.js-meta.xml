@@ -10,6 +10,10 @@
     <targetConfigs>
         <targetConfig targets="lightningCommunity__Default">
             <property name="recordId" label="Record Id" type="String" description="Automatically bind the page's record id to the component variable" required="true" default="{!recordId}" />
+            <property name="operatingMode" label="Operating Mode" type="String" datasource="Amenity,Property" description="Adjusts what type of booking is made." required="true" default="Amentiy" />
+        </targetConfig>
+        <targetConfig targets="lightning__RecordPage">
+            <property name="operatingMode" label="Operating Mode" type="String" datasource="Amenity,Property" description="Adjusts what type of booking is made." required="true" default="Amentiy" />
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>
