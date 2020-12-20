@@ -15,6 +15,7 @@ export default class AmenitySchedule extends LightningElement {
     selectedTime;
     selectedEmail;
     booked = false;
+    error = false;
 
     // Toggle Select
     toggleSelection(event){
@@ -45,20 +46,32 @@ export default class AmenitySchedule extends LightningElement {
     }
 
     // Create Record
-    createAppointment() {
+    createAppointment(event) {
 
-        //Create appointment
-        this.booked = true;
+        //Lock button
+        let evt = event.currentTarget;
+        evt.disabled = true;
 
-        //Build amenity details
+        //Clear error
+        this.error = null;
 
         //Call Apex Controller To Created Booking
-        bookAmenity({ email: this.selectedEmail, timeSlot: this.selectedTime })
+        bookAmenity({ email: this.selectedEmail, timeSlot: this.selectedTime, amenity: this.recordId})
             .then((result) => {
-                console.log(result);
+                if (result) {
+                    console.log("REIT Amenity Schedule || Successfully created booking.");
+                    this.booked = true;
+                } else {
+                    console.log("REIT Amenity Schedule || Failed to create booking.");
+                    this.booked = false;
+                    evt.disabled = false;
+                }
             })
             .catch((error) => {
+                console.log("REIT Amenity Schedule || Hard error during booking creation. Details:");
+                this.error = error.body.message;
                 console.log(error);
+                evt.disabled = false;
             });
     }
 }
