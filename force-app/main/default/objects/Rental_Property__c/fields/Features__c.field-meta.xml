@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Features__c</fullName>
+    <externalId>false</externalId>
+    <label>Features</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Affordable Housing</fullName>
+                <default>false</default>
+                <label>Affordable Housing</label>
+            </value>
+            <value>
+                <fullName>Air Conditioning</fullName>
+                <default>false</default>
+                <label>Air Conditioning</label>
+            </value>
+            <value>
+                <fullName>BBQ</fullName>
+                <default>false</default>
+                <label>BBQ</label>
+            </value>
+            <value>
+                <fullName>Bike Storage</fullName>
+                <default>false</default>
+                <label>Bike Storage</label>
+            </value>
+            <value>
+                <fullName>Concierge</fullName>
+                <default>false</default>
+                <label>Concierge</label>
+            </value>
+            <value>
+                <fullName>Daycare</fullName>
+                <default>false</default>
+                <label>Daycare</label>
+            </value>
+            <value>
+                <fullName>Dry Cleaning</fullName>
+                <default>false</default>
+                <label>Dry Cleaning</label>
+            </value>
+            <value>
+                <fullName>Fitness Center</fullName>
+                <default>false</default>
+                <label>Fitness Center</label>
+            </value>
+            <value>
+                <fullName>Full Kitchen</fullName>
+                <default>false</default>
+                <label>Full Kitchen</label>
+            </value>
+            <value>
+                <fullName>Game Room</fullName>
+                <default>false</default>
+                <label>Game Room</label>
+            </value>
+            <value>
+                <fullName>High Ceilings</fullName>
+                <default>false</default>
+                <label>High Ceilings</label>
+            </value>
+            <value>
+                <fullName>Lounge</fullName>
+                <default>false</default>
+                <label>Lounge</label>
+            </value>
+            <value>
+                <fullName>On-site Retail</fullName>
+                <default>false</default>
+                <label>On-site Retail</label>
+            </value>
+            <value>
+                <fullName>Package Lockers</fullName>
+                <default>false</default>
+                <label>Package Lockers</label>
+            </value>
+            <value>
+                <fullName>Parking</fullName>
+                <default>false</default>
+                <label>Parking</label>
+            </value>
+            <value>
+                <fullName>Party Room</fullName>
+                <default>false</default>
+                <label>Party Room</label>
+            </value>
+            <value>
+                <fullName>Pet Friendly</fullName>
+                <default>false</default>
+                <label>Pet Friendly</label>
+            </value>
+            <value>
+                <fullName>Public Transportation</fullName>
+                <default>false</default>
+                <label>Public Transportation</label>
+            </value>
+            <value>
+                <fullName>Room Service</fullName>
+                <default>false</default>
+                <label>Room Service</label>
+            </value>
+            <value>
+                <fullName>Smoke-Free</fullName>
+                <default>false</default>
+                <label>Smoke-Free</label>
+            </value>
+            <value>
+                <fullName>Spa</fullName>
+                <default>false</default>
+                <label>Spa</label>
+            </value>
+            <value>
+                <fullName>Storage Lockers</fullName>
+                <default>false</default>
+                <label>Storage Lockers</label>
+            </value>
+            <value>
+                <fullName>Walk-in Closets</fullName>
+                <default>false</default>
+                <label>Walk-in Closets</label>
+            </value>
+            <value>
+                <fullName>Washer Dryer</fullName>
+                <default>false</default>
+                <label>Washer Dryer</label>
+            </value>
+            <value>
+                <fullName>WiFi</fullName>
+                <default>false</default>
+                <label>WiFi</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>
