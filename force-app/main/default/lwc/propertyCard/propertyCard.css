@@ -6,7 +6,6 @@
     margin: 0px;
     padding: 0px;
     border-radius: 5px;
-    max-height: 225px;
 }
 .reit-property-card-container:hover {
     animation-name: shadowFade;
@@ -16,7 +15,7 @@
 }
 .reit-property-card-image {
     display: block;
-    width: 40%;
+    min-width: 40%;
     border-radius: 5px 0px 0px 5px;
     object-fit: cover;
     overflow: hidden;
@@ -24,6 +23,9 @@
 }
 .reit-property-card-image img {
     border-radius: 0px 0px 0px 5px;
+    object-fit: cover;
+    overflow: hidden;
+    height: 100%;
 }
 .reit-property-card-promo {
     position: relative;
@@ -44,6 +46,7 @@
     width: 60%;
     display: block;
     vertical-align: top;
+    flex-grow: 1;
 }
 
 .reit-property-card-description-copy {
@@ -64,7 +67,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    margin-top: 3.5em;
+    margin-top: 1em;
 }
 .reit-property-card-description-prices {
     align-self: flex-start;
