@@ -15,17 +15,17 @@
 }
 .reit-property-card-image {
     display: block;
-    min-width: 40%;
+    width: 40%;
     border-radius: 5px 0px 0px 5px;
     object-fit: cover;
     overflow: hidden;
-
 }
 .reit-property-card-image img {
     border-radius: 0px 0px 0px 5px;
     object-fit: cover;
     overflow: hidden;
-    height: 100%;
+    height: 250px;
+    width: 100%;
 }
 .reit-property-card-promo {
     position: relative;
